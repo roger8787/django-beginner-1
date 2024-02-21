@@ -1,11 +1,608 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 
 
 {% block content %}
 
 
-<h1>Hello World </h1>
+<div class="container-fluid container-lg d-flex  align-items-center justify-content-center " id="section1">
+    <div class="text-center principal">
+        <h1>Elizabeth && Rogelio</h1>
+       
+       
+       
+        <div class="row enLinea">
+            <div class="col-sm section">
+                1
+            </div>
+
+            <div class="col-sm section">
+                JUNIO
+            </div>
+
+            <div class="col-sm section">
+                2024
+            </div>
+        </div>
+
+      
+        
+    </div>
+</div>
+
+
+
+<div class="container-fluid container-lg " id="section2">
+
+<div class="row">
+
+
+
+   <!-- audio -->
+   <audio src="audio/oceans.mp3" id="audio" loop></audio>
+   <button onclick="togglePlay()">Play/pause</button>
+
+
+
+   <script>
+    var audio = document.getElementById('audio');
+    function togglePlay(){
+        if(audio.paused){
+            audio.play();
+        }else{
+            audio.pause();
+        }
+    }
+   </script>
+
+
+
+
+
+
+
+    <div class="text-center">
+        <h1>¡Nos casamos!</h1>
+        <p>Cada familia tiene una historia, bienvenidos a la nuestra.</p>
+        
+    </div>
+
+</div>
+
+<div class="row text-center">
+    <div class="text-center foto">
+        
+    </div>
+    <div class="  mx-2 p-3 text-center">
+        <h1>El que haya esposa haya el bien y alcanza el favor del señor</h1>
+        
+        <h2>Proverbios 18:22</h2>
+       
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="container-fluid container-lg d-flex flex-column align-items-center justify-content-center" id="padres">
+<div class="col-md-6 mb-3 p-3 text-center">
+    <p>Con el amor y apoyo de nuestros padres, te invitamos a ser testigo de nuestra unión.</p>
+    
+</div>
+<div class="row justify-content-center w-100">
+    <div class="col-md-4  mx-2 p-3 text-center">
+        <h1>Padres del novio</h1>
+        <p>Jorge Gómez Perez</p>
+        <p>Eva Cruz Mendez</p>
+    </div>
+    <div class="col-md-4  mx-2 p-3 text-center ">
+        <h1>Padres de la novia</h1>
+        <p>Eduardo Aguilar Molina</p>
+        <p>Martha Muñoz López</p>
+    </div>
+    
+</div>
+</div>
+
+
+
+
+<div class="container-fluid container-lg d-flex flex-column align-items-center justify-content-center" id="cuenta-atras">
+<div id="countdown" class="text-center">
+    <h2>¡Sólo faltan!</h2>
+    <div id="timer" class="d-flex justify-content-center">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid container-lg d-flex justify-content-center align-items-center " id="ceremonia">
+<div class="row">
+
+      
+
+          <div class="col-md-12 text-center">
+        <img src="{%static "/icons/wedding.png"%}" alt="" height="50" class="mb-3">
+
+        <h1>Nuestra Ceremonia y Recepción</h1>
+        <p>Sabado, 1 de junio de 2024.</p>
+        <p>4:00 p.m.</p>
+        <p>Hotel Real del Bosque.</p>
+        <p>Cerrada de Jacarandas #122 Colonia San Marcos Tula de Allende Hgo.</p>
+        <button class="button">Abrir mapa</button>
+    </div>
+</div>
+
+</div>
+
+
+
+<!-- Section for Padrinos -->
+
+
+<div class="container-fluid container-lg" id="padrinos">
+
+<div class="row ">
+    <div class="col">
+        <h1 class="text-center">Padrinos de boda</h1>
+        <p class="text-center">Gracias por ser parte de esta historia</p>
+    </div>
+</div>
+
+
+<div id="carouselExampleFade" class="carousel slide ">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+            <h1 class="text-center">Padrinos de anillos</h1>  
+            <hr style="background-color: black;">             
+            <p class="text-center">Eduardo Aguilar Molina</p>
+                        
+                <p>&</p>
+             <p>Martha Muñoz Lopez</p>
+          
+        </div>
+
+
+      </div>
+      <div class="carousel-item">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+                <h1 class="text-center">Padrinos de Biblia</h1>  
+                <hr style="background-color: black;">             
+                <p class="text-center">Manuel Cruz</p>
+                            
+                    <p>&</p>
+             <p>Angelica Mendez</p>
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+            <h1 class="text-center">Padrinos de Lazo</h1>  
+            <hr style="background-color: black;">             
+            <p class="text-center">Jorge Gómez Perez</p>
+                        
+                <p>&</p>
+             <p>Eva Cruz Mendez</p>
+          
+        </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+            <h1 class="text-center">Padrinos de Arras</h1>  
+            <hr style="background-color: black;">             
+            <p class="text-center">Victor Albarrán Perez</p>
+                        
+                <p>&</p>
+             <p>Anel Estrada Correa</p>
+          
+        </div>
+    </div>
+
+
+
+        
+    <div class="carousel-item">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+            <h1 class="text-center">Padrinos de Cojines</h1>  
+            <hr style="background-color: black;">             
+            <p class="text-center">Victor Manuel Arellano Salazar </p>
+                        
+                <p>&</p>
+             <p>Martha Erika Aguilar Muñoz</p>
+          
+        </div>
+    </div>
+
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="color:black;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- damas de honor -->
+
+
+
+<div class="container-fluid container-lg" id="damas-honor">
+
+<div class="row ">
+    <div class="col">
+        <h1 class="text-center">Damas y Acompañantes</h1>
+        <p class="text-center">Gracias por ser parte de esta historia</p>
+    </div>
+</div>
+
+
+<div id="carousel-damas" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+
+            <div class="row">
+                <h1 class="text-center">Damas</h1> 
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center">Erika Aguilar </p>
+                    <p class="text-center">Liliana Aguilar</p>
+                    <p class="text-center">Brenda Gomez</p>
+                    <p class="text-center">Damaris Gómez</p>
+                    <p class="text-center">Sarahi Aguilar</p>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center">Alejandra Aguilar</p>
+                    <p class="text-center">Mahanaim Díaz</p>
+                    <p class="text-center">Daromi Robles</p>
+                    <p class="text-center">Dariana Vazquez</p>
+                    <p class="text-center">Mariana Jimenez</p>
+
+                </div>
+            </div>
+           
+            
+              
+           
+           
+
+          
+        </div>
+
+
+      </div>
+
+                  
+    <div class="carousel-item">
+        <div class="padrinos d-flex flex-column align-items-center justify-content-center " >
+           
+            <h1 class="text-center">Acompañantes</h1>  
+           
+            
+
+                <div class="row w-100">
+                    <div class="col-md-6 col-sm-12" >
+                        <p class="text-center">Carlos Camacho</p>
+                        <p class="text-center">Victor Arellano </p>
+                        
+                        <p class="text-center">Gustavo Gómez</p>
+                        <p class="text-center">Jorge Gómez</p>
+                       
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <p class="text-center">David Robles</p>
+                        <p class="text-center">Ricardo Díaz</p>
+                        <p class="text-center">Julio Hernandez</p>
+                        <p class="text-center">Samuel Aguilar</p>
+                        <p class="text-center">Ulises Ochoa</p>
+                     
+                        
+                    </div>
+                </div>
+
+            
+            
+          
+              
+          
+        </div>
+    </div>
+     
+   
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-damas" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="color:black;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-damas" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- 
+codigo de vestimenta -->
+
+<div class="container-fluid container-lg" id="codigo-vestimenta">
+
+
+<h1>Codigo de vestimenta</h1>
+    <p>FORMAL</p>
+
+<div class="row text-center">
+        
+    
+        <div class="col">
+            <img src="{%static "icons/traje.png"%}" alt="" height="150px">
+            <p>Traje y corbata</p>
+            
+
+        </div>
+
+        <div class="col">
+            <img src="{%static "icons/vestido.png"%}" alt="" height="150px">
+            <p>Vestido largo</p>
+            
+        </div>
+
+        
+   
+
+    
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid container-lg" id="programa">
+
+
+<div class="row text-center">
+    <div class="col">
+        <h1>Programa</h1>
+        <p>Hemos planeado un día lleno de diversión para disfrutar al máximo.</p>
+    </div>
+</div>
+
+<div class="programa-1">
+    <div class="row text-center">
+        <!-- Ceremonia Religiosa -->
+    
+
+
+        <div class="col-md-4 col-sm-6 ">
+            <div class="event-section">
+                <img src="{% static "icons/wedding.png"%}" alt="Ceremonia Religiosa" class="imagen">
+                <div class="event-title">Ceremonia Religiosa</div>
+                <p class="event-subtitle">Acompáñanos a recibir la bendición de Dios</p>
+                <p>16:00 hrs.</p>
+            </div>
+        </div>
+
+                    <!-- Coctel -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="event-section">
+                            <img src="{% static "icons/drinking.png"%}" alt="Coctel" class="imagen">
+                            <div class="event-title">Coctel</div>
+                            <p class="event-subtitle"></p>
+                            <p>18:00 hrs.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Ceremonia Civil -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="event-section">
+                            <img src="{% static "icons/cereminia-civil_1.png"%}" alt="Ceremonia Civil" class="imagen">
+                            <div class="event-title">Ceremonia Civil</div>
+                            <p class="event-subtitle">No te pierdas nuestro intercambio de votos</p>
+                            <p>18:20 hrs.</p>
+                        </div>
+                    </div>
+
+
+        <!-- Recepción -->
+        <div class="col-md-4 col-sm-6">
+            <div class="event-section">
+                <img src="{%static "icons/dinner.png"%}" alt="Recepción" class="imagen">
+                <div class="event-title">Recepción</div>
+                <p class="event-subtitle">Tómate fotos con nosotros</p>
+                <p>17:00 hrs.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Cena -->
+        <div class="col-md-4 col-sm-6">
+            <div class="event-section">
+                <img src="{% static "icons/banquete.png"%}" alt="Cena" class="imagen">
+                <div class="event-title">Cena</div>
+                <p class="event-subtitle">Disfruta de una deliciosa cena</p>
+            </div>
+        </div>
+
+        <!-- Baile -->
+        <!-- <div class="col-md-4 col-sm-6">
+            <div class="event-section">
+                <img src="icons/wedding.png" alt="Baile" class="imagen">
+                <div class="event-title">Baile</div>
+                <div class="event-subtitle">Subtitle for Baile</div>
+            </div>
+        </div>  -->
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- wedding form -->
+
+<div class="container-fluid  container-lg" id="wedding">
+<form class="wedding-form">
+    <h1 class="text-center">Confirmar asistencia</h1>
+    <p class="text-center">Confirma tu asistencia lo antes posible</p>
+    <label for="reservation-number"><p>Numero de reservación:</p></label>
+    <div class="input-group mb-3">
+        <input type="text" id="reservation-number" name="reservation-number" class="form-control" required>
+        <button class="btn btn-primary" type="button">Buscar</button>
+    </div>
+    <input type="text" id="reservation-number" name="reservation-number" required>
+    
+    <label for="guest-name"><p>Nombre de invitado</p></label>
+    <input type="text" id="guest-name" name="guest-name" readonly disabled>
+  
+    <label for="attendance"><p>asistencia</p></label>
+    <select id="attendance" name="attendance" required>
+      <option value="asistire"><p>Asistiré</p></option>
+      <option value="no-asistire"><p>No Asistiré</p></option>
+    </select>
+  
+    <label for="ticket-count"><p>Numero de tickets</p></label>
+    <input type="text" id="ticket-count" name="ticket-count" readonly disabled>
+  
+    <label for="message"><p>Felicita a los novios!</p></label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  
+    <button type="submit">Enviar</button>
+  </form>
+
+</div>
+
+
+
+
+
+
+<!-- mesa de regalos -->
+
+
+<div class="container-fluid container-lg" id="mesa-regalos">
+<h1 class="text-center">Mesa de Regalos</h1>
+
+<p class="text-center">Tu presencia es nuestro mejor regalo, pero si quieres tener un detalle con nosotros de damos algunas ideas</p>
+
+
+<div class="card-mesa text-center">
+    
+    <img src="{% static "img/money-envelope.png"%}" alt="" height="100px">
+    <h2>Lluvia de Sobres</h2>
+    
+   
+</div>
+
+
+<div class="card-mesa text-center" >
+    <h2>BBVA</h2>
+    <hr style="background-color:blue;"> 
+    <p>Rogelio Gomez</p>
+    <p>CLABE: Pending</p>
+    
+    <p>Tarjeta: Pending</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- gallery -->
+
+
+<!-- Gallery -->
+
+
+
+<!-- Gallery -->
+
+
+
+
+
 
 
 {% endblock content %}
