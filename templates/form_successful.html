@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+    
+ <!-- messages-->
+ {% if messages %}
+
+ {% for message in messages  %}
+
+    {% if 'success' in message.tags %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    {%elif 'error' in message.tags%}
+    
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
+    {% endif %}
+
+
+
+ 
+   
+ {% endfor %}
+  
+{% endif %} 
+
+
+
+
+
+
+    <div class="row">
+        <div class="col text-center">
+
+            <h1 style="color: black;">Gracias por tu confirmación</h1>
+            <p>Nombre: {{reservation.name}}</p>
+            <p>Numero de tickets: {{reservation.num_tickets}}</p>
+            <p>Mensaje a los novios: {{reservation.message}}</p>
+        
+
+        {% if reservation.will_assist %}
+        <p>Si asistiré a la boda</p>
+          
+        {%else%} <p>No podré asistir.</p>    
+    
+        {% endif %}
+
+
+        <a href="{%url 'app1:home'%}">regresar</a>
+
+            
+        
+
+
+        </div>
+    </div>
+    
+
+    
+</div>
+
+
+
+
+
+{% endblock content %}

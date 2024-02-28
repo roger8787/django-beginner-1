@@ -7,7 +7,19 @@
 {% block content %}
 
 
+
+
+
 <div class="container-fluid container-lg d-flex  align-items-center justify-content-center " id="section1">
+   
+   
+  
+   
+   
+   
+   
+   
+   
     <div class="text-center principal">
         <h1>Elizabeth && Rogelio</h1>
        
@@ -517,36 +529,66 @@ codigo de vestimenta -->
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <!-- wedding form -->
 
+
+<a id="form-position"></a>
+
+
+
+
+
 <div class="container-fluid  container-lg" id="wedding">
-<form class="wedding-form">
+<form class="wedding-form" method="POST"  id="myForm">
+    {% csrf_token %}
     <h1 class="text-center">Confirmar asistencia</h1>
     <p class="text-center">Confirma tu asistencia lo antes posible</p>
     <label for="reservation-number"><p>Numero de reservación:</p></label>
     <div class="input-group mb-3">
-        <input type="text" id="reservation-number" name="reservation-number" class="form-control" required>
-        <button class="btn btn-primary" type="button">Buscar</button>
-    </div>
-    <input type="text" id="reservation-number" name="reservation-number" required>
+        {{form.reservation_code}}
+           
+    </div>  
+    <!-- <input type="text" id="reservation-number" name="reservation-number" required> -->
     
-    <label for="guest-name"><p>Nombre de invitado</p></label>
-    <input type="text" id="guest-name" name="guest-name" readonly disabled>
+    <!-- <label for="guest-name"><p>Nombre de invitado</p></label>
+    <input type="text" id="guest-name" name="guest-name" readonly disabled> -->
   
-    <label for="attendance"><p>asistencia</p></label>
-    <select id="attendance" name="attendance" required>
+    <label for="attendance">Confirma tu asistencia</p></label>
+    <!-- <select id="attendance" name="attendance" required>
       <option value="asistire"><p>Asistiré</p></option>
       <option value="no-asistire"><p>No Asistiré</p></option>
-    </select>
+    </select> -->
+    {{form.will_assist}}
   
-    <label for="ticket-count"><p>Numero de tickets</p></label>
-    <input type="text" id="ticket-count" name="ticket-count" readonly disabled>
+    <!-- <label for="ticket-count"><p>Numero de tickets</p></label>
+    <input type="text" id="ticket-count" name="ticket-count" readonly disabled> -->
   
     <label for="message"><p>Felicita a los novios!</p></label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+    <!-- <textarea id="message" name="message" rows="5" required></textarea> -->
+   {{form.message}}
   
-    <button type="submit">Enviar</button>
+    <button type="submit" id="submitBtn">Enviar</button>
   </form>
+
+
+
+
+
+
+
+
+
 
 </div>
 

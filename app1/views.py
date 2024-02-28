@@ -1,8 +1,44 @@
-from django.shortcuts import render
-
+from django.shortcuts import get_object_or_404, redirect, render
+from .models import Reservation
+from .forms import ReservationForm
+from django.contrib import messages
 
 def home(request):
-    return render(request, 'index.html', {'name':'rogelio'})
+    if request.method == 'POST':
+        form = ReservationForm(request.POST,)
+       
+       
+        if form.is_valid():
+            
+            reservation_code = form.cleaned_data['reservation_code']
+            
+          
+            try:
+                reservation = Reservation.objects.get(reservation_code=reservation_code)
+                form = ReservationForm(request.POST, instance=reservation)
+                if form.is_valid():
+                    form.save()
+                    messages.success(request, 'Tu información ha sido enviada!')
+                    return render(request, 'form_successful.html', {'reservation':reservation})
+            except Reservation.DoesNotExist:
+                messages.error(request,'Reservación no encontrada!')
+                return redirect('app1:not-found')
+                
+            
+        else:
+            messages.error(request, 'No se pudo envíar, trata nuevamente')
+    else:
+        form = ReservationForm()
+    
+    return render(request, 'index.html', {'form':form})
 
 def about(request):
     return render(request, 'about.html', {'name':'Rogelio'})
+
+
+# def successful_view(request):
+#     return render(request, 'form_successful.html', {})
+
+def reservation_not_found(request):
+    return render(request,'not-found.html',{})
+    
