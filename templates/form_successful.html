@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
+
 
 {% block content %}
 
 
 <div class="container">
+
+  <link rel="stylesheet" href="{%static 'css/form_successful.css'%}">
 
     
  <!-- messages-->
@@ -39,24 +43,34 @@
 
 
 
-    <div class="row">
-        <div class="col text-center">
-
-            <h1 style="color: black;">Gracias por tu confirmación</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="custom-container">
+            <h1 class="confirmation">Gracias por tu confirmación</h1>
             <p>Nombre: {{reservation.name}}</p>
             <p>Numero de tickets: {{reservation.num_tickets}}</p>
             <p>Mensaje a los novios: {{reservation.message}}</p>
+
+          
+            
         
 
         {% if reservation.will_assist %}
-        <p>Si asistiré a la boda</p>
+        <p class="attend">Si asistiré a la boda</p>
           
-        {%else%} <p>No podré asistir.</p>    
+        {%else%} <p class="not-attend">No podré asistir.</p>    
     
         {% endif %}
 
 
-        <a href="{%url 'app1:home'%}">regresar</a>
+        <a href="{%url 'app1:home'%}" class="return-link">regresar</a>
+
+
+
+
+
+
+      </div>
 
             
         

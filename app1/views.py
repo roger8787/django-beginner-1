@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
+from django.views.decorators.http import require_POST
 
 def home(request):
     if request.method == 'POST':
@@ -22,7 +23,7 @@ def home(request):
                     return render(request, 'form_successful.html', {'reservation':reservation})
             except Reservation.DoesNotExist:
                 messages.error(request,'Reservación no encontrada!')
-                return redirect('app1:not-found')
+                return render(request, 'not-found.html', {})
                 
             
         else:
@@ -39,6 +40,15 @@ def about(request):
 # def successful_view(request):
 #     return render(request, 'form_successful.html', {})
 
+@require_POST
 def reservation_not_found(request):
     return render(request,'not-found.html',{})
+
+
+@require_POST
+def successful_form_view(request):
+    return render(request, 'form-successful.html',{})
+    
+
+
     

@@ -1,0 +1,38 @@
+.custom-container {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.custom-container h1 {
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.custom-container p {
+    color: #343a40;
+}
+
+.custom-container .attend {
+    font-weight: bold;
+    color: green;
+}
+
+.custom-container .not-attend {
+    font-weight: bold;
+    color: red;
+}
+
+.custom-container .return-link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.custom-container .return-link:hover {
+    text-decoration: underline;
+}
