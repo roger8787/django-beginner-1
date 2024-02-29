@@ -10,6 +10,7 @@
 
 
 
+
 <div class="container-fluid container-lg d-flex  align-items-center justify-content-center " id="section1">
    
    
@@ -21,7 +22,7 @@
    
    
     <div class="text-center principal">
-        <h1>Elizabeth && Rogelio</h1>
+        <h1>Elizabeth & Rogelio</h1>
        
        
        
@@ -52,23 +53,25 @@
 
 
 
-   <!-- audio -->
-   <audio src="audio/oceans.mp3" id="audio" loop></audio>
-   <button onclick="togglePlay()">Play/pause</button>
+ 
+
+
+  <!-- audio -->
+  <audio src="{%static 'audio/oceans.mp3'%}" type="audio/mpeg" id="audio" loop></audio> 
+   <button onclick="togglePlay()">Play/pause</button> 
 
 
 
    <script>
-    var audio = document.getElementById('audio');
-    function togglePlay(){
-        if(audio.paused){
-            audio.play();
-        }else{
-            audio.pause();
-        }
-    }
-   </script>
-
+   var audio = document.getElementById('audio');
+   function togglePlay(){
+       if(audio.paused){
+           audio.play();
+       }else{
+           audio.pause();
+       }
+   }
+  </script> 
 
 
 
@@ -564,7 +567,7 @@ codigo de vestimenta -->
     <!-- <label for="guest-name"><p>Nombre de invitado</p></label>
     <input type="text" id="guest-name" name="guest-name" readonly disabled> -->
   
-    <label for="attendance">Confirma tu asistencia</p></label>
+    <label for="attendance"><p>Confirma tu asistencia</p></label>
     <!-- <select id="attendance" name="attendance" required>
       <option value="asistire"><p>Asistiré</p></option>
       <option value="no-asistire"><p>No Asistiré</p></option>
