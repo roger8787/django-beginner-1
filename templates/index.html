@@ -159,6 +159,46 @@
     <!-- About End -->
 
 
+
+
+    <!-- padres -->
+
+
+    <div class="container-fluid">
+        <h1 class="font-secondary display-4 text-center">Con el Amor y apoyo de nuestros padres</h1>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Padres del Novio</h6>
+                    <p>Jorge Gómez Perez</p>
+                    <p>Eva Cruz Mendez</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Padres de la  Novia</h6>
+                    <p>Eduardo Aguilar Molina</p>
+                    <p>Martha Muñoz Lopez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
     <!-- Story Start -->
     <div class="container-fluid py-5" id="story">
         <div class="container pt-5 pb-3">
@@ -225,14 +265,14 @@
     <!-- Gallery Start -->
     <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
-            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
-            <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Galeria</h6>
+            <h1 class="font-secondary display-4 text-white">Nuestra Galeria de fotos</h1>
             <i class="far fa-heart text-white"></i>
         </div>
         <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
                 <img class="img-fluid w-100" src="{%static "/img/gallery-1.jpg"%}" alt="">
-                <a href="{%static "/img/gallery-1.jpg"%}" data-lightbox="gallery">
+                <a href="" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
@@ -275,8 +315,8 @@
     <div class="container-fluid py-5" id="event">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
-                <h1 class="font-secondary display-4">Our Wedding Event</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Evento</h6>
+                <h1 class="font-secondary display-4">Nuestro Programa</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -288,17 +328,17 @@
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
-                        <h4 class="mb-3">The Reception</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
+                        <h4 class="mb-3">Ceremonia Religiosa</h4>
+                        <p class="mb-2">Acompáñanos a recibir la bendición de Dios</p>
+                        <p class="mb-0">04:00 PM.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
                         <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
-                        <h4 class="mb-3">Wedding Party</h4>
+                        <h4 class="mb-3">Coctel</h4>
                         <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
+                        <p class="mb-0">06:00 PM.</p>
                     </div>
                 </div>
             </div>
@@ -505,16 +545,16 @@
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="{% static "/lib/easing/easing.min.js"%}"></script>
+    <script src="{% static "/lib/waypoints/waypoints.min.js"%}"></script>
+    <script src="{% static "/lib/owlcarousel/owl.carousel.min.js"%}"></script>
+    <script src="{% static "/lib/isotope/isotope.pkgd.min.js"%}"></script>
+    <script src="{% static "/lib/lightbox/js/lightbox.min.js"%}"></script>
 
-    <!-- Template Javascript -->
+    
     <script src="{%static '/js/main.js'%}"></script>
 </body>
 
