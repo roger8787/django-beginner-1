@@ -11,6 +11,9 @@ class Reservation (models.Model):
     num_tickets = models.IntegerField(default=1)
     will_assist = models.BooleanField(default=False)
     message = models.TextField(blank=True, null=True)
+    num_will_assist = models.IntegerField(default=1)
+    is_reserving_hotel= models.BooleanField(default=False)
+    mail = models.EmailField(blank=True, null=True)
 
 
     def save(self, *args, **kwargs):
