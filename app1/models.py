@@ -11,7 +11,7 @@ class Reservation (models.Model):
     num_tickets = models.IntegerField(default=1)
     will_assist = models.BooleanField(default=False)
     message = models.TextField(blank=True, null=True)
-    num_will_assist = models.IntegerField(default=1)
+    num_will_assist = models.IntegerField(default=1,null=True, blank=True)
     child_tickets = models.IntegerField(default=0)
     adults_tickets = models.IntegerField(default=1)
     is_reserving_hotel= models.BooleanField(default=False)
