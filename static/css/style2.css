@@ -16,6 +16,9 @@
   border-radius: 10px;
   width: 100%;
 }
+#form-reservation input {
+  width: 90%;
+}
 
 #will-not-assist {
   height: 100vh;

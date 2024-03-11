@@ -4,7 +4,7 @@ from .models import Reservation
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        exclude='name','num_tickets','num_will_assist','is_reserving_hotel'
+        exclude='name','num_tickets','num_will_assist','is_reserving_hotel','child_tickets','adults_tickets'
         
         widgets={
             'reservation_code':forms.TextInput(attrs={'placeholder':'Enter reservation code', 'class':'form-control bg-secondary border-0 py-4 px-3'}), 
