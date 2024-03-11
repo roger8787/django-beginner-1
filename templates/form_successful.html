@@ -5,9 +5,10 @@
 {% block content %}
 
 
-<div class="container" id="form-successful" >
+<div class="container-fluid" id="form-successful" >
 
   <link rel="stylesheet" href="{%static 'css/style1.css'%}">
+  <link rel="stylesheet" href="{%static 'css/style2.css'%}">
 
     
  <!-- messages-->
@@ -42,73 +43,106 @@
 
 
 
-
-    <div class="row justify-content-center">
-        <div class="col-md-8 ">
-          <div class="people-card-success">
-            <h1 class="confirmation font-secondary display-4">Reservación encontrada.</h1>
-            <p>Nombre: {{reservation.name}}</p>
-            <p>Numero de tickets: {{reservation.num_tickets}}</p>
-            <p>Mensaje a los novios: {{reservation.message}}</p>
-
-          
-            
-        
-
-        {% if reservation.will_assist %}
-        <p class="attend">Si asistiré a la boda</p>
-          
-        {%else%} <p class="not-attend">No podré asistir.</p>    
-    
-        {% endif %}
+{% if reservation.will_assist %}
 
 
+
+<p class="asignacion-boletos">Por razones de organización estamos asignando boletos. Agradecemos tu comprehensión. </p>
+
+
+
+<div class="row justify-content-center">
+  <div class="col-md-8 text-left ">
+    <div class="people-card-success ">
+      <h1 class="confirmation font-secondary display-4">Reservación encontrada.</h1>
+      <p>Nombre:  <span class="asignacion-boletos">{{reservation.name}}</span> </p>
+      <p>Boletos asignados: <span class="asignacion-boletos"> {{reservation.num_tickets}}</span></p>
       
 
+    
+      
+  
+
+
+
+
+
+
+</div>
+
+<a href="{%url 'app1:home'%}" class="return-link">regresar</a>
+
+      
+  
+
+
+  </div>
+</div>
+
+<div class="container-fluid " id="rsvp">
+
+  
+                <form id="form-reservation" method="POST">
+                  {% csrf_token %}
+                 
+                   
+                      
+                        <div class="form-group col-sm-6">
+                          <label for="" class="form-label">Cuantas personas asistiran?</label>
+                            {{form.num_will_assist}}
+                            <small id="emailHelp" class="form-text text-muted">El maximo numero deber la cantidad de tickets asignados</small>
+                        </div>
+                       <div class="form-group col-sm-6">
+                        <label for="" class="form-label">Estas reservando Hotel?</label>
+                            {{form.is_reserving_hotel}}
+                        </div>
+
+                        
+                  
+
+                    <input type="submit" class="button-form btn btn-secondary font-weight-bold py-3 px-3 text-center" value="Enviar">
+                    
+                  
+                </form>
+            </div>
+
+
+
+ {%else%}
+ 
+  <div class="container" ">
+    <div class="row">
+      <div class="col" id="will-not-assist">
+        <h1 class="text-center">Gracias por tu confirmación!</h1>
+        <a href="{%url "app1:home"%}" class="return-link">Regresar</a>
       </div>
-
-      <a href="{%url 'app1:home'%}" class="return-link">regresar</a>
-
-            
-        
-
-
-        </div>
     </div>
 
+  </div>
 
     
 
 
-    <div class="container-fluid py-5" id="rsvp">
-      <div class="container py-2">
-        
-                      <form id="form-reservation" method="POST">
-                        {% csrf_token %}
-                       
-                          <div class="form-row">
-                            
-                              <div class="form-group col-sm-6">
-                                <label for="" class="form-label">Cuantas personas asistiran?</label>
-                                  {{form.num_will_assist}}
-                                  <small id="emailHelp" class="form-text text-muted">El maximo numero deber la cantidad de tickets asignados</small>
-                              </div>
-                             <div class="form-group col-sm-6">
-                              <label for="" class="form-label">Estas reservando Hotel?</label>
-                                  {{form.is_reserving_hotel}}
-                              </div>
+  
+{% endif %}
 
-                              
-                          </div>
 
-                          <input type="submit" class="button-form btn btn-secondary font-weight-bold py-3 px-3 text-center" value="Enviar">
-                          
-                        
-                      </form>
-                  </div>
-              </div>
+
+
+
+
+
+ 
+              
+              
+              
+              
+              
+              
+              
+                </div>
           </div>
-      </div>
+   
   </div>
 
     

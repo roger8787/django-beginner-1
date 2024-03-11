@@ -1,0 +1,54 @@
+
+$primary:#D9E8D8;
+
+
+
+#cuenta-atras{
+
+    display: flex;
+    align-items: center;
+    justify-content: cen
+}
+
+.cita-biblica{
+   
+    padding-top: 20px;
+    
+}
+
+#lluvia-sobres{
+    hr{
+        margin-bottom: 30px;
+    }
+   
+}
+
+
+#form-reservation{
+    
+    border-radius: 10px;
+    width: 100%;
+}
+
+#will-not-assist{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        color: blue;
+        text-align: center;
+    }
+
+}
+
+
+.asignacion-boletos{
+   padding-top: 10px;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
