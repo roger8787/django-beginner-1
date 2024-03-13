@@ -28,7 +28,6 @@
   justify-content: center;
 }
 #will-not-assist a {
-  color: blue;
   text-align: center;
 }
 
@@ -38,4 +37,53 @@
   text-align: center;
   color: black;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  /* CSS styles specific to tablets */
+  #form-successful {
+    height: 100vh;
+  }
+  .return-link {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+  }
+  #form-reservation {
+    width: 93%;
+  }
+  .not-found {
+    background-color: #D9E8D8;
+  }
+}
+/* Styles for devices with a maximum width of 576px (phones) */
+@media (max-width: 576px) {
+  /* CSS styles specific to phones */
+}
+/* Styles for devices with a minimum width of 1200px (large screens) */
+@media (min-width: 1200px) {
+  /* CSS styles specific to large screens */
+  h1 {
+    font-size: 20px;
+  }
+  #form-reservation {
+    height: 300px;
+  }
+}
+/* Styles for devices with a minimum width of 992px and a maximum width of 1199px (medium screens) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* CSS styles specific to medium screens */
+  #about {
+    background-size: contain;
+  }
+  #form-successful {
+    height: 120vh;
+    height: 100%;
+  }
+  #form-reservation {
+    width: 100%;
+  }
+  .cita-biblica {
+    background-color: black;
+  }
 }

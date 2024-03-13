@@ -1,40 +1,29 @@
 {% extends "base.html" %}
+{% load static %}
+
+
+
 
 
 
 {% block content %}
 
-<div class="container">
 
 
-       
- <!-- messages-->
- {% if messages %}
+<link rel="stylesheet" href="{%static "css/style1.css"%}">
+<link rel="stylesheet" href="{%static "css/style2.css"%}">
 
- {% for message in messages  %}
 
-    {% if 'success' in message.tags %}
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>{{message}}</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
 
-    {%elif 'error' in message.tags%}
-    
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>{{message}}</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      
-    {% endif %}
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center not-found" style="height: 100vh;">
+
+
+
 
 
 
  
-   
- {% endfor %}
-  
-{% endif %} 
+
 
 
 
@@ -44,10 +33,10 @@
 
     <div class="row text-center">
         <div class="col">
-            <h1 class="text-center" style="color:black">Codigo de reservación no encontrado</h1>
+            <h1 class="text-center font-secondary" style="color:black">Codigo de reservación no encontrado</h1>
     
 
-    <a href="{%url 'app1:home'%}">Regresar</a>
+    <a href="{%url 'app1:home'%}" style="color: black;">Regresar</a>
         </div>
     </div>
     

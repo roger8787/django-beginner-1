@@ -30,7 +30,7 @@
                 <a href="#gallery" class="nav-item nav-link">Galeria</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
+                <h1 class="font-secondary text-white mb-n2">Rogelio <span class="text-primary">&</span> Elizabeth</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <a href="#family" class="nav-item nav-link">Padrinos & Acompañantes</a>
@@ -44,7 +44,7 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5" id="home">
+    <div class="container-fluid container-lg p-0 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
@@ -198,7 +198,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
+    <div class="container-fluid container-lg py-5" id="about">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h6>
@@ -224,16 +224,16 @@
 
     <!-- location start -->
 
-    <div class="container-fluid d-flex flex-colum align-items-center justify-content-center" id="location"> 
+    <div class="container-fluid container-lg  d-flex flex-colum align-items-center justify-content-center" id="location"> 
         <div class="row text-center">
-            <div class="col">
+            <div class="col d-flex flex-column text-center">
                 <h1 class="font-secondary display-4">Nuestra Ceremonia & Recepción.</h1>
                 <p>Sabado, 1 de junio de 2024. </p>
                 <p>4:00 P.M.</p>
                 <p>Hotel Real del Bosque</p>
                 <p>Cerrada de jacarandas #122 Colonia San Marcos Tula de Allende Hgo.</p>
                 
-                <img src="{%static "img/real-del-bosque.jpg"%}" alt="">
+                <img class= ''src="{%static "img/real-del-bosque.jpg"%}" alt="" width='300px' style='margin:auto;' />
                 <a href="https://maps.app.goo.gl/eGJMYAtXs3cKfqYi6" class="btn btn-primary">Ir Al Mapa</a>
 
             </div>
@@ -250,7 +250,7 @@
 
 
     <!-- Story Start -->
-    <div class="container-fluid py-5" id="story">
+    <div class="container-fluid container-lg py-5" id="story">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h6>
@@ -313,7 +313,7 @@
 
 
     <!-- Gallery Start -->
-    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
+    <div class="container-fluid  bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Galeria.</h6>
             <h1 class="font-secondary display-4 text-white">Nuestra galeria de fotos.</h1>
@@ -377,7 +377,7 @@
 
 
     <!-- Event Start -->
-    <div class="container-fluid py-5" id="event">
+    <div class="container-fluid container-lg py-5" id="event">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h6>
@@ -410,14 +410,16 @@
                 </div>
 
                 <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-left ml-md-3">
-                        <!-- <img class="img-fluid mb-4" src="img/event-2.jpg" alt=""> -->
-                        <img src="{%static "icons/cereminia-civil_1.png"%}" alt="" class="icon-wedding" >
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <!-- <img class="img-fluid mb-4" src="img/event-1.jpg" alt=""> -->
+                        <img src="{% static "icons/cereminia-civil_1.png"%}" alt="" class="icon-wedding" >
                         <h4 class="mb-3 font-secondary display-4">Ceremonia Civil</h4>
                         <p class="mb-2">No te pierdas nuestro enlace matrimonial.</p>
                         <p class="mb-0">18:20 hrs.</p>
                     </div>
                 </div>
+
+          
 
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
@@ -429,14 +431,20 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <!-- <img class="img-fluid mb-4" src="img/event-2.jpg" alt=""> -->
+
+
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <!-- <img class="img-fluid mb-4" src="img/event-1.jpg" alt=""> -->
+                        
                         <h4 class="mb-3 font-secondary display-4">Recepción</h4>
                         <p class="mb-2">Estaremos encantados de tenerte con nosotros.</p>
-                        <p class="mb-4">19:00 hrs.</p>
+                        <p class="mb-0">19:00 hrs.</p>
                     </div>
+
                 </div>
+
+          
 
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
@@ -448,15 +456,19 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <!-- <img class="img-fluid mb-4" src="img/event-2.jpg" alt=""> -->
+
+
+
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <!-- <img class="img-fluid mb-4" src="img/event-1.jpg" alt=""> -->
                         <img src="{%static "icons/camera.png"%}" alt="" class="icon-wedding" >
                         <h4 class="mb-3 font-secondary display-4">Sesión de fotos</h4>
                         <p class="mb-2">Tomate foto con nosotros.</p>
-                        <p class="mb-4">20:30 hrs.</p>
+                        <p class="mb-0">20:30 hrs.</p>
                     </div>
                 </div>
+
 
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
@@ -473,7 +485,7 @@
 
 
     <!-- Friends & Family Start -->
-    <div class="container-fluid py-5" id="family">
+    <div class="container-fluid container-lg py-5" id="family">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center ">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>
@@ -615,7 +627,7 @@
 
 
     <!-- RSVP Start -->
-    <div class="container-fluid py-5" id="rsvp">
+    <div class="container-fluid container-lg py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h6>
@@ -637,8 +649,8 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <label for="" class="form-label">Asistiré a la boda?</label>
-                                <div class="form-group col-sm-6">
+                                <label for="" class="form-label" style="">Asistiré a la boda?</label>
+                                <div class="form-group col-sm-12">
                                          {{form.will_assist}}
                                 </div>
                                
@@ -663,7 +675,7 @@
 
     <!-- lluvia de sobres -->
 
-    <div class="container-fluid " id="lluvia-sobres">
+    <div class="container-fluid container-lg " id="lluvia-sobres">
         <div class="row">
             <div class="col">
                 <hr width="100% mt-4">
@@ -701,7 +713,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+    <div class="container-fluid container-lg bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
         <div class="container text-center py-5">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-3 text-white"> Gracias por celebrar con nosotros y por ser parte de nuestra historia de amor. .</h1>
